@@ -1,6 +1,6 @@
 # Kopf in docker
 
-Tagged docker images for kopf, `lmenezes/elasticsearch-kopf` on docker hub.
+Tagged docker images for kopf, `tinle/elasticsearch-kopf` on docker hub.
 
 ## Usage
 
@@ -17,7 +17,6 @@ if you don't want to get hacked.
 
 * `KOPF_SERVER_NAME` server name for your grafana, for example `kopf.example.com`
 * `KOPF_ES_SERVERS` elasticsearch servers in `host:port[,host:port]` format
-* `KOPF_ES_ROOT_PATH` elasticsearch root path
 * `KOPF_SSL_CERT` path to ssl `.crt` file, enables http-to-https redirect, should be bind-mounted
 * `KOPF_SSL_KEY` path to ssl `.key` file, should be bind-mounted
 * `KOPF_BASIC_AUTH_LOGIN` basic auth login, if needed
@@ -36,7 +35,7 @@ exposing it on `kopf.dev` with ip address `10.10.10.10`:
 
 ```
 docker run -d -p 10.10.10.10:80:80 -e KOPF_SERVER_NAME=grafana.dev \
-    -e KOPF_ES_SERVERS=es.dev:9200 --name kopf lmenezes/elasticsearch-kopf
+    -e KOPF_ES_SERVERS=es.dev:9200 --name kopf tinle/elasticsearch-kopf
 ```
 #### fig
 
@@ -46,7 +45,7 @@ After create a fig file and off you go.
 ```
 $ cat << EOF > fig.yml
 kopf:
-  image: lmenezes/elasticsearch-kopf
+  image: tinle/elasticsearch-kopf
   ports:
   - 8080:80
   environment:

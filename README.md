@@ -1,3 +1,13 @@
+2/2017
+
+This is a fork of kopf.  All new bugs are mine, so do not bother the original author :-)
+
+I like kopf and do not see why it would not work for newer ES (newer than v2.x).   I do not like
+kopf replacement, cerebro.
+
+
+
+
 kopf
 =======================
 
@@ -12,7 +22,7 @@ Versions
 | --------------------- | ------ | --------------- |
 | 0.90.X                | 0.90   | v0.90           |
 | 1.X                   | 1.0    | v1.6.1          |
-| 2.X                   | 2.0    | v2.1.1          |
+| 2.X                   | 2.0    | v2.1.3          |
 
 Installation
 ------------
@@ -34,7 +44,8 @@ git checkout {branch|version}
 open _site/index.html
 ```
 
-ps: local execution doesn't work with Chrome(and maybe other browsers). See more [here](http://docs.angularjs.org/api/ng.directive:ngInclude).
+ps: local execution does not work with Chrome(and maybe other browsers). See more
+[here](http://docs.angularjs.org/api/ng.directive:ngInclude).
 
 Alternatively you can run it via `connect` which should solve the `ng-include` issue.
 
